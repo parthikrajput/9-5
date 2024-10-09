@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../Assets/Css/Style.css" />
+  <title>Kraftig</title>
+</head>
+
+<body>
+  <main class="main">
+    <div class="logo">
+      <img src="../Assets/Images/logo.svg" alt="" />
+    </div>
+    <video autoplay="" loop="" muted="" playsinline="" preload="auto">
+      <source src="../Assets/Images/MP4/BG_Loop_v1.mp4" type="video/mp4" />
+    </video>
+    <section class="page-content justify-content-center">
+      <div class="wrapper-content">
+        <div class="page-heading mb-5">
+          <h1 class="w-100">Gute Wahl!</h1>
+          <p>Hier sind ein paar kräftige Käsesorten für Dich:</p>
+        </div>
+        <div class="category_product row row-cols-3 w-100 justify-content-center mt-1 mx-0">
+          <div class="col p-0">
+            <div class="products">
+              <a href="../Bergsteiger.html">
+                <img src="../Assets/Images/Bergsteiger.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="col p-0">
+            <div class="products text-end">
+              <a href="../Heuballen.html">
+                <img src="../Assets/Images/Heuballen.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="col p-0">
+            <div class="products">
+              <a href="../Hohlengereift.html">
+                <img src="../Assets/Images/Hoehlengereift.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="col p-0">
+            <div class="products">
+              <a href="../Cremig-wurzing.html">
+                <img src="../Assets/Images/Cremig-wuerzig.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="col p-0">
+            <div class="products">
+              <a href="../Grand-cru-classe.html">
+                <img src="../Assets/Images/Grand-Cru.png" alt="" />
+              </a>
+            </div>
+          </div>
+        </div> <a href="../AllProduct.html" id="readMoreBtn" onclick="toggleReadMore()"
+          style="margin: 70px 0 170px;">noch
+          mehr</a>
+      </div>
+      <footer class="footer">
+        <div class="row">
+          <div class="col-7">
+            <div class="action-controls">
+              <a href="../AllProduct.html">
+                <img src="../Assets/Images/open.svg" alt="" />
+                <p>Alle Produkte ansehen</p>
+              </a>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="action-controls">
+              <a href="../Home.html">
+                <img src="../Assets/Images/close.svg" alt="" />
+                <p>Reise abbrechen</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="../Assets/Js/gsap.min.js"></script>
+  <script src="../Assets/Js/jquery.min.js"></script>
+  <script>
+    gsap.registerPlugin();
+    const anime = gsap.timeline();
+
+    anime
+      .from(".page-heading", {
+        y: -300,
+        opacity: 0,
+        duration: 1,
+        scale: 1.3,
+        ease: "power1.out",
+      })
+      .from(".products", {
+        y: 300,
+        opacity: 0,
+        duration: 1,
+        ease: "expo.out",
+        stagger: 0.1,
+      });
+
+    $(document).ready(function () {
+      window.setTimeout(function () {
+        location.href = "../index.html";
+      }, 60000);
+    });
+
+
+  </script>
+</body>
+
+</html>
